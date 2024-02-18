@@ -46,10 +46,10 @@ function obfuscate(code: string) {
 function copy(code: string) {
   navigator.clipboard.writeText(code)
     .then(() => {
-      console.log('Code copied to clipboard');
+      window.alert('Code copied to clipboard');
     })
     .catch((error) => {
-      console.log('Failed to copy code to clipboard:', error);
+      window.alert('Failed to copy code to clipboard:', error);
     });
 }
 
