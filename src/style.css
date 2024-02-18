@@ -22,7 +22,6 @@ body {
 }
 #app {
   display: flex;
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -58,14 +57,20 @@ textarea {
   padding: 2rem;
   text-align: center;
 }
+.icons {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  flex: 1 1 100px;
+}
+.icons > img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
 
-.logo {
-  will-change: filter;
-  transition: filter 300ms;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em white);
-}
+
 
 
 .flexBoxes {
@@ -94,21 +99,7 @@ textarea {
 
 }
 
-.icons {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  align-items: center;
-  flex: 1 1 100px;
-}
-.icons > img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  will-change: filter;
-  transition: filter 300ms;
 
-}
 
 .buttons {
   display: flex;
@@ -126,10 +117,16 @@ button {
   font-weight: 500;
   font-family: inherit;
   cursor: pointer;
-  transition: border-color 0.25s;
-  flex: 1 0 100px;
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  justify-content: center;
+  transition: box-shadow .5s;
 }
-
+button:hover {
+  box-shadow: 0 0 10px 2px white ;
+}
 #obfuscate {
   background-color: #009b77;
   color: #ffffff;

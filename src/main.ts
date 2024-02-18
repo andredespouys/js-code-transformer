@@ -6,20 +6,30 @@ import JavaScriptObfuscator from 'javascript-obfuscator';
 const textArea = document.getElementById('code') as HTMLTextAreaElement;
 
 const copyButton = document.getElementById('copy') as HTMLButtonElement;
-const output = document.getElementById('obfuscated') as HTMLTextAreaElement;
 
-copyButton.addEventListener('click', () => {
-  console.log('Current code:', output.value)
-  copy(output.value);
-});
+// Miniify button
+
+const minifyButton = document.getElementById('minify') as HTMLButtonElement;
+
+// OPutput textarea
+const output = document.getElementById('obfuscated') as HTMLTextAreaElement;
 
 let code = textArea.value as string;
 
-textArea.addEventListener('input', () => {
-  code = textArea.value;
-} );
 
+function minifyCode(code : string) {
+  try{
+  // Remove comments
+  code = code.replace(/\/\/.*|\/\*[^]*?\*\//g, '');
 
+  // Remove whitespace
+  output.innerHTML =  code.replace(/\s+/g, ' ');
+
+  }catch (error) {
+    console.log(error);
+  }
+
+}
 
 function obfuscate(code: string) {
   try {
@@ -42,6 +52,20 @@ function copy(code: string) {
       console.log('Failed to copy code to clipboard:', error);
     });
 }
+
+copyButton.addEventListener('click', () => {
+  console.log('Current code:', output.value)
+  copy(output.value);
+});
+
+
+textArea.addEventListener('input', () => {
+  code = textArea.value;
+} );
+
+minifyButton.addEventListener('click', () => {
+  minifyCode(code);
+});
 
 // function Clear
 document.getElementById('clear')?.addEventListener('click', () => {
