@@ -1,0 +1,142 @@
+
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0 auto;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, #34568b, #646cff);
+  color: #f9f9f9;
+  font-family: 'Roboto', sans-serif;
+  
+}
+#app {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  gap: 2em;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+label {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+textarea {
+  position: relative;
+  width: 90%;
+  padding: 5%;
+  border-radius: 8px;
+  border: 1px solid #009b77;
+  font-size: 1em;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 200px;
+
+}
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em white);
+}
+
+
+.flexBoxes {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: top;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-evenly;
+  height: 500px;
+}
+
+.flexBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 300px;
+  text-align: left;
+  flex: 1 1 300px;
+  height: 100%;
+
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  flex: 1 1 100px;
+}
+.icons > img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  will-change: filter;
+  transition: filter 300ms;
+
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 1em;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  flex: 1 0 100px;
+}
+
+#obfuscate {
+  background-color: #009b77;
+  color: #ffffff;
+}
+
+#clear {
+  background-color: #ff4d4d;
+  color: #ffffff;
+}
+

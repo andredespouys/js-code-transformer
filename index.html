@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Hello, this a personal obfuscator app!</h1>
+      <quote>This is a small app to practice my coding skills and to consolidate my knowledge on the principle of obfuscation</quote>
+        <div class="flexBoxes">
+          <div class="flexBox">
+            <label for="code">Insert your js code here: </label>
+            <textarea id="code" placeholder="Enter your code here"></textarea>
+            <div class="buttons">
+              <button id="clear">Clear</button>
+              <button id="obfuscate">Obfuscate</button>
+            </div>
+          </div>
+          <div class="flexBox icons">
+            <img src="/vite.svg"  class="logo" alt="Vite logo" />
+            <img src="/arrow-right.svg"  class="logo" alt="Arrow right" />
+            <img src="src/typescript.svg"  class="logo" alt="Typescript logo" />
+          </div>
+          <div class="flexBox">
+            <label for="deobfuscate">Obfuscated</label>
+            <textarea readonly id="obfuscated" placeholder="See your obfuscated code here"></textarea>
+            <div class="buttons">
+              <button id="copy">Copy</button>
+
+          </div>
+        </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
